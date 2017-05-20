@@ -17,7 +17,7 @@ body {
 
 label {
 	font-size: 300%;
-	text-shadow: 0 0 5px #151517;
+	text-shadow: 0 0 10px #151517;
 }
 
 #container {
@@ -52,7 +52,7 @@ label {
 	max-height: 80%;
 	height: 80%;
 	width: 70%;
-	margin-left: 2%;
+	margin-left: 5%;
 	margin-right: 2%;
 }
 
@@ -74,10 +74,11 @@ input {
 	font-style: italic;
 	color: #ffd272;
 	background-color: black;
-	font-size: 150%;
-	margin-bottom: 1%;
-	margin-right: 0.5%;
-	margin-left: 0.5%;
+	font-size: 250%;
+	margin-bottom: 2%;
+    margin-right: 0.1%;
+    margin-left: 0.1%;
+    margin-top: -2%;
 
 }
 
@@ -92,10 +93,11 @@ input {
 }
 
 h1 {
-	text-shadow: 0 0 5px #151517;
+	text-shadow: 0 0 10px #151517;
 	font-size: 450%;
 }
 
 p {
 	font-size: 150%;
+	text-shadow: 0 0 10px #151517;
 }
