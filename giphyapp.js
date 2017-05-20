@@ -3,7 +3,7 @@ var seaCreatures = ["nautilus", "dolphin", "shark", "jellyfish"];
 function showAnimals() {
     $("#animal-view").empty();
     var animal = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
@@ -49,7 +49,7 @@ function renderButtons() {
 $("#add-animal").on("click", function() {
     $("#animal-view").empty();
     var animal = $("#animal-input").val().trim();
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
