@@ -1,4 +1,4 @@
-var animals = ["Dog", "Dolphin", "Parrot", "Rhino"];
+var seaCreatures = ["nautilus", "dolphin", "shark", "jellyfish"];
 
 function showAnimals() {
     $("#animal-view").empty();
@@ -10,7 +10,6 @@ function showAnimals() {
         url: queryURL,
         method: "GET"
     }).done(function(response) {
-        console.log(response);
         var results = response.data;
 
         for (var i = 0; i < results.length; i++) {
@@ -35,11 +34,11 @@ function showAnimals() {
 function renderButtons() {
     $("#buttons-view").empty();
 
-    for (var i = 0; i < animals.length; i++) {
+    for (var i = 0; i < seaCreatures.length; i++) {
         var button = $("<button>");
         button.addClass("animal");
-        button.attr("data-name", animals[i]);
-        button.text(animals[i]);
+        button.attr("data-name", seaCreatures[i]);
+        button.text(seaCreatures[i]);
         $("#buttons-view").append(button);
     }
 };
@@ -57,7 +56,6 @@ $("#add-animal").on("click", function() {
         url: queryURL,
         method: "GET"
     }).done(function(response) {
-        console.log(response);
         var results = response.data;
 
         for (var i = 0; i < results.length; i++) {
@@ -83,8 +81,9 @@ $("#add-animal").on("click", function(event) {
     event.preventDefault();
     $("#animal-view").empty();
     var animalButton = $("#animal-input").val().trim();
-    animals.push(animalButton);
+    seaCreatures.push(animalButton);
     renderButtons();
+    $("#animal-input").val("");
 });
 
 
@@ -105,9 +104,14 @@ $(document).on("click", ".animalGif", function() {
       }
 });
 
+$("#clear-creatures").on ("click", function() {
+	$("#buttons-view").empty();
+	renderButtons();
+});
+
 //TO DO:
 
-// stop a new button, and a search for giphys when the search doesn't return anything
+
 
 // prevent a new button from being added if the search value is already in the animals array
 

@@ -1,3 +1,22 @@
+* {
+	text-align: center;
+	box-sizing: border-box;;
+}
+
 .animal {
 	text-transform: capitalize;
+}
+
+body {
+	background: url("images/gbrturtle.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#container {
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	color: #ffd272;
+	background-color: #8dffc8;
 }
